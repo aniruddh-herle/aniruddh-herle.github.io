@@ -1,127 +1,118 @@
-import React, { useState }  from 'react';
-import ProjectCard from './ProjectCard';
+import React from 'react';
 import '../styles/projects.css';
 
-import deepfake from '../assets/projects/deepfake.png';
-import hubble from '../assets/projects/hubble.png';
-import masters from '../assets/projects/masters.png';
-import murmur from '../assets/projects/murmur.png';
-import mwd from '../assets/projects/mwd.png';
-import opticdisc1 from '../assets/projects/opticdisc1.png';
-import scania from '../assets/projects/scania.png';
-import sdss from '../assets/projects/sdss.png';
-import signature from '../assets/projects/signature.png';
-
-
 const Projects = () => {
-    const projectsData = [
-        {
-        title: "Parameter Learning in Tomography",
-        description: "This is my masters thesis project on tomographic imaging and parameter learning using the famous Shepp-Logan phantom.",
-        image: masters,
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/ipcv-masters-thesis"
-        },
-        {
-        title: "Optic disc segmentation in Drishti-GS dataset",
-        description: "This project deals with the segmentation of optic disc from retinal fundus images from the famous Drishti-GS dataset",
-        image: opticdisc1,
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/optic-disc-segmentation-drishtigs"
-        },
-        {
-        title: "Sloan Digital Sky Survey DR14",
-        description: "3-class classification of cosmological objects in the famous SDSS dataset, version DR14",
-        image: sdss, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/sloan-digital-sky-survey-sdss-dr14-ml"
-        },
-        {
-        title: "Deepfake Detection",
-        description: "Detecting deep fake images using various ensemble classifiers",
-        image: deepfake, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/deepfake-detection"
-        },
-        {
-        title: "ESA Hubble Dataset Creator",
-        description: "Creating the publicly available dataset from images taken by the Hubble Space telescope, by scraping from ESA's website",
-        image: hubble, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/esa-hubble-dataset-creator"
-        },
-        {
-        title: "Signature Recognition",
-        description: "Recognising signatures and measuring the truth behind every one of them using feature analysis",
-        image: signature, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/signature-recognition"
-        },
-        {
-        title: "Heart Murmur Classification",
-        description: "Predicting a heart to be normal or abnormal based on the murmur signal classifications using simple ML algorithms",
-        image: murmur, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/murmur-classification"
-        },
-        {
-        title: "Scania Trucks - Air Pressure Failure Prediction",
-        description: "A classical machine learning algorithm based binary classification on the famous Scania APS dataset",
-        image: scania, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/scania-aps-fail-pred-ml"
-        },
-        {
-        title: "Multiclass Weather Classification",
-        description: "Comparative analysis of ML and DL algorithms on the popular Multi-class Weather Dataset (MWD) for multi-class weather classification",
-        image: mwd, 
-        buttonLabel: "GitHub",
-        buttonLink: "https://github.com/subhamshome/multiclass-classification-weather-mwd"
-        },        
-    ];
-      
-    const [visibleProjects, setVisibleProjects] = useState(3);
 
-    // const showMoreProjects = () => {
-    //     setVisibleProjects(visibleProjects + 3);
-    // };
+  const projects = [
 
-    const showLessProjects = () => {
-        setVisibleProjects(3);
-    };
+    {
+      year: '2026',
+      title: 'Assembly bias and the redshift evolution of intrinsic alignments for LRGs',
+      description:
+        'I investigated the redshift evolution of intrinsic alignments for luminous red galaxies using the FLAMINGO hydrodynamical simulations. The work provides an empirical model for the evolution of the alignment amplitude with halo mass and redshift, and demonstrates that galaxy formation history introduces an additional dependence of the alignment signal, commonly referred to as assembly bias.',
+      type: 'First-author publication',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    },
 
-    const showAllProjects = () => {
-        setVisibleProjects(projectsData.length);
-      };
+    {
+      year: '2026',
+      title: 'Intrinsic alignments in the FLAMINGO simulations with two-point statistics',
+      description:
+        'A comprehensive study of intrinsic alignments in the FLAMINGO simulations, covering mass dependence, redshift evolution, feedback and higher-order contributions. I developed the TATT-M model, which exploits relationships between the higher-order TATT terms to retain model flexibility while reducing the number of free parameters. TATT-M has been selected as the fiducial intrinsic-alignment model for Euclid.',
+      type: 'First-author publication',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    },
 
+    {
+      year: '2025',
+      title: 'Unbiased estimates of the shapes of haloes using the positions of satellite galaxies',
+      description:
+        'I developed a statistically unbiased method for estimating dark-matter halo shapes from the positions of satellite galaxies. Using the multiple-resolution FLAMINGO simulations, I quantified and corrected sampling noise arising from sparse satellite populations, recovering halo shapes to substantially lower masses than are accessible through weak lensing.',
+      type: 'First-author publication',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    },
 
-    return (
-        <div>
-          <div className='project-cards'>
-            {projectsData.slice(0, visibleProjects).map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                buttonLabel={project.buttonLabel}
-                buttonLink={project.buttonLink}
-              />
-            ))}
+    {
+      year: '2023',
+      title: 'Selection functions of strong lens finding neural networks',
+      description:
+        'During my MSc in Astrophysics at LMU Munich, I investigated the selection functions of neural networks used to identify strong gravitational lenses. The work quantified detection biases introduced by machine-learning-based lens searches and their implications for astronomical surveys.',
+      type: 'First-author publication',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    },
+
+    {
+      year: '2026',
+      title: 'Can’t aVOID IA: intrinsic alignments of galaxies around voids',
+      description:
+        'I am leading an ongoing study of galaxy alignments around cosmic voids using hydrodynamical simulations. This work provides the first detection of galaxy–void alignments in a hydrodynamical simulation and investigates their dependence on feedback and environment.',
+      type: 'In preparation',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    },
+
+    {
+      year: '2026',
+      title: 'Halo inertia tensors as random matrices',
+      description:
+        'An interdisciplinary project applying ideas from random matrix theory to the statistics of dark-matter halo shapes. I contribute hydrodynamical simulation expertise, catalogue construction and the interpretation of the resulting models in the context of halo formation and intrinsic-alignment mitigation.',
+      type: 'In preparation',
+      buttonText: 'Google Scholar',
+      buttonLink:
+        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
+    }
+
+  ];
+
+  return (
+    <div className="projects-grid">
+
+      {projects.map((project, index) => (
+
+        <div className="project-card" key={index}>
+
+          <div className="project-year">
+            {project.year}
           </div>
-          <div className='view-buttons'>
-            {visibleProjects < projectsData.length ? (
-              <button onClick={showAllProjects} className="view-more-button">
-                Show All {projectsData.length} projects
-              </button>
-            ) : (
-              <button onClick={showLessProjects} className="view-more-button">
-                Show Less
-              </button>
-            )}
+
+          <div className="project-content">
+
+            <div className="project-type">
+              {project.type}
+            </div>
+
+            <h2>{project.title}</h2>
+
+            <p>
+              {project.description}
+            </p>
+
+            <a
+              href={project.buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-button"
+            >
+              {project.buttonText}
+            </a>
+
           </div>
+
         </div>
-      );
-}
+
+      ))}
+
+    </div>
+  );
+};
 
 export default Projects;
