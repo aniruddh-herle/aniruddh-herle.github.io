@@ -2,8 +2,8 @@
     text-align: center;
 }
 
-.pretitle-font{
-    letter-spacing: 2px;;
+.pretitle-font {
+    letter-spacing: 2px;
 }
 
 .timeline-main {
@@ -12,18 +12,17 @@
 }
 
 .home-headers {
-    margin-top: 40px; 
+    margin-top: 40px;
     color: black;
 }
 
+/* =========================
+   HERO
+   ========================= */
+
 #home {
-    
-    background-image: url('../assets/ai_video.gif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
     position: relative;
-    height: 90vh; 
+    height: 90vh;
     color: #ffffff;
     text-align: center;
     padding: 100px 0;
@@ -31,8 +30,45 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
-  
+
+/* Background video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Dark overlay to make text readable */
+#home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Hero text/content */
+.hero {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
 .hero h1 {
     font-size: 5rem;
     margin: 0;
@@ -47,14 +83,20 @@
     margin-top: 20px !important;
 }
 
-.academic-hero a{
+.academic-hero a {
     color: white !important;
 }
 
-.academic-hero a:hover{
+.academic-hero a:hover {
     transform: scale(1.2) !important;
 }
-.about p{
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about p {
     margin: 0 10%;
 }
 
@@ -67,7 +109,7 @@
     padding: 10px 0 0 0;
 }
 
-.intro-grid{
+.intro-grid {
     display: grid;
     grid-template-columns: 25% 75%;
     padding-left: 10%;
@@ -89,7 +131,7 @@
 }
 
 .intro-image:hover {
-    transform: scale(1.05) rotate(5deg);;
+    transform: scale(1.05) rotate(5deg);
 }
 
 .intro-text-container {
@@ -98,7 +140,7 @@
 
 .research-card-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     text-align: center;
     align-content: center;
@@ -111,15 +153,26 @@
     font-weight: bold;
 }
 
+
+/* =========================
+   RESEARCH PROJECTS
+   ========================= */
+
 .projects-main {
     margin-left: 10%;
     margin-right: 10%;
 }
 
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 1080px) {
+
     .intro-grid {
-      grid-template-columns: 1fr;
-      text-align: center; 
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .intro-image {
@@ -138,5 +191,35 @@
 
     .research-card-section {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE HERO
+   ========================= */
+
+@media (max-width: 768px) {
+
+    #home {
+        height: 80vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin: 20px 5%;
+    }
+
+    /*
+     * Disable the fixed-background behaviour on mobile
+     * since the video itself is now the background.
+     */
+    .hero-video {
+        object-position: center;
     }
 }

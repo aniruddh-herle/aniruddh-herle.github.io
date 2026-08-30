@@ -3,26 +3,46 @@ import '../styles/home.css';
 
 import AcademicBar from './AcademicBar';
 import introImage from '../assets/introImage.png';
+import backgroundVideo from '../assets/SEC5IMG0.mp4';
 import Timeline from './Timeline';
 import Projects from './Projects';
 import Contact from './Contact';
 
 const Home = () => {
+
+  const heroText = (
+    <div>
+      PhD Candidate in Cosmology, Leiden Observatory
+
+      <div className="academic-hero">
+        <AcademicBar />
+      </div>
+    </div>
+  );
+
   return (
     <div className="main-div-home">
 
       {/* HERO */}
       <div id="home">
         <div className="hero">
-          <h1>Aniruddh Herle</h1>
 
-          <div>
-            PhD Candidate in Cosmology, Leiden Observatory
+          <video
+            className="hero-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
 
-            <div className="academic-hero">
-              <AcademicBar className="academic-hero" />
-            </div>
+          <div className="hero-content">
+            <h1>Aniruddh HERLE</h1>
+            {heroText}
           </div>
+
         </div>
       </div>
 
@@ -31,6 +51,7 @@ const Home = () => {
       <div id="about" className="sections-home" />
 
       <div className="about">
+
         <h1 className="home-headers">About</h1>
 
         <div className="intro-grid">
@@ -92,6 +113,7 @@ const Home = () => {
 
         </div>
 
+
         <h3>Research Interests</h3>
 
         <div className="research-card-section">
@@ -104,6 +126,7 @@ const Home = () => {
           <div>Statistical Cosmology</div>
           <div>Euclid & LSST</div>
         </div>
+
       </div>
 
 
@@ -111,6 +134,7 @@ const Home = () => {
       <div id="timeline" className="sections-home" />
 
       <div className="timeline-main">
+
         <h1 className="home-headers">
           Academic & Research Journey
         </h1>
@@ -122,6 +146,7 @@ const Home = () => {
             secondaryColor: '#ffffff',
           }}
         />
+
       </div>
 
 
@@ -129,11 +154,13 @@ const Home = () => {
       <div id="projects" className="sections-home" />
 
       <div style={{ maxWidth: '100vw' }}>
+
         <h1 className="home-headers">Research</h1>
 
         <div className="projects-main">
           <Projects />
         </div>
+
       </div>
 
 
@@ -141,8 +168,11 @@ const Home = () => {
       <div id="contact" className="sections-home" />
 
       <div className="contact-main">
+
         <h1 className="home-headers">Contact</h1>
+
         <Contact />
+
       </div>
 
     </div>
