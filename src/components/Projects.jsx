@@ -1,118 +1,82 @@
 import React from 'react';
 import '../styles/projects.css';
 
+const publications = [
+    {
+        year: '2026',
+        title: 'Assembly bias and the redshift evolution of intrinsic alignments for LRGs',
+        context:
+            'Using the FLAMINGO hydrodynamical simulations, I investigate how intrinsic alignments depend on halo formation history in addition to halo mass. The work demonstrates an assembly-bias signal in galaxy and halo alignments and develops an empirical model for their mass and redshift evolution.',
+        link: 'https://ui.adsabs.harvard.edu/abs/2026arXiv260700785H/abstract',
+        journal: 'arXiv',
+    },
+    {
+        year: '2026',
+        title: 'Intrinsic alignments in the FLAMINGO simulations with two-point statistics',
+        context:
+            'A comprehensive study of intrinsic alignments in the FLAMINGO simulations using galaxy clustering and position–shape two-point statistics. I introduce TATT-M, a mass-dependent extension of the TATT model that retains its flexibility while reducing the number of free parameters.',
+        link: 'https://ui.adsabs.harvard.edu/abs/2026A%26A...711A.235H/abstract',
+        journal: 'Astronomy & Astrophysics',
+    },
+    {
+        year: '2025',
+        title: 'Unbiased estimates of the shapes of haloes using the positions of satellite galaxies',
+        context:
+            'I develop a statistically motivated method to correct biases in dark matter halo shapes measured from sparsely sampled satellite galaxies. The method accounts for sampling noise and enables more reliable halo-shape measurements at lower satellite counts and halo masses.',
+        link: 'https://ui.adsabs.harvard.edu/abs/2025A%26A...699A.192H/abstract',
+        journal: 'Astronomy & Astrophysics',
+    },
+    {
+        year: '2024',
+        title: 'Selection functions of strong lens finding neural networks',
+        context:
+            'During my MSc, I investigated selection biases introduced by convolutional neural networks used to identify strong gravitational lenses. The work showed that lens-finding networks preferentially select systems with larger Einstein radii and more concentrated sources, with implications for future wide-field surveys.',
+        link: 'https://ui.adsabs.harvard.edu/abs/2024MNRAS.534.1093H/abstract',
+        journal: 'Monthly Notices of the Royal Astronomical Society',
+    },
+];
+
 const Projects = () => {
+    return (
+        <div className="publication-grid">
 
-  const projects = [
+            {publications.map((paper, index) => (
+                <article className="publication-card" key={index}>
 
-    {
-      year: '2026',
-      title: 'Assembly bias and the redshift evolution of intrinsic alignments for LRGs',
-      description:
-        'I investigated the redshift evolution of intrinsic alignments for luminous red galaxies using the FLAMINGO hydrodynamical simulations. The work provides an empirical model for the evolution of the alignment amplitude with halo mass and redshift, and demonstrates that galaxy formation history introduces an additional dependence of the alignment signal, commonly referred to as assembly bias.',
-      type: 'First-author publication',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    },
+                    <div className="publication-year">
+                        {paper.year}
+                    </div>
 
-    {
-      year: '2026',
-      title: 'Intrinsic alignments in the FLAMINGO simulations with two-point statistics',
-      description:
-        'A comprehensive study of intrinsic alignments in the FLAMINGO simulations, covering mass dependence, redshift evolution, feedback and higher-order contributions. I developed the TATT-M model, which exploits relationships between the higher-order TATT terms to retain model flexibility while reducing the number of free parameters. TATT-M has been selected as the fiducial intrinsic-alignment model for Euclid.',
-      type: 'First-author publication',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    },
+                    <div className="publication-content">
 
-    {
-      year: '2025',
-      title: 'Unbiased estimates of the shapes of haloes using the positions of satellite galaxies',
-      description:
-        'I developed a statistically unbiased method for estimating dark-matter halo shapes from the positions of satellite galaxies. Using the multiple-resolution FLAMINGO simulations, I quantified and corrected sampling noise arising from sparse satellite populations, recovering halo shapes to substantially lower masses than are accessible through weak lensing.',
-      type: 'First-author publication',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    },
+                        <div className="publication-journal">
+                            {paper.journal}
+                        </div>
 
-    {
-      year: '2023',
-      title: 'Selection functions of strong lens finding neural networks',
-      description:
-        'During my MSc in Astrophysics at LMU Munich, I investigated the selection functions of neural networks used to identify strong gravitational lenses. The work quantified detection biases introduced by machine-learning-based lens searches and their implications for astronomical surveys.',
-      type: 'First-author publication',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    },
+                        <h2>
+                            {paper.title}
+                        </h2>
 
-    {
-      year: '2026',
-      title: 'Can’t aVOID IA: intrinsic alignments of galaxies around voids',
-      description:
-        'I am leading an ongoing study of galaxy alignments around cosmic voids using hydrodynamical simulations. This work provides the first detection of galaxy–void alignments in a hydrodynamical simulation and investigates their dependence on feedback and environment.',
-      type: 'In preparation',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    },
+                        <p>
+                            {paper.context}
+                        </p>
 
-    {
-      year: '2026',
-      title: 'Halo inertia tensors as random matrices',
-      description:
-        'An interdisciplinary project applying ideas from random matrix theory to the statistics of dark-matter halo shapes. I contribute hydrodynamical simulation expertise, catalogue construction and the interpretation of the resulting models in the context of halo formation and intrinsic-alignment mitigation.',
-      type: 'In preparation',
-      buttonText: 'Google Scholar',
-      buttonLink:
-        'https://scholar.google.com/citations?user=_hhU_nMAAAAJ&hl=en'
-    }
+                        <a
+                            href={paper.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="publication-link"
+                        >
+                            Read paper →
+                        </a>
 
-  ];
+                    </div>
 
-  return (
-    <div className="projects-grid">
-
-      {projects.map((project, index) => (
-
-        <div className="project-card" key={index}>
-
-          <div className="project-year">
-            {project.year}
-          </div>
-
-          <div className="project-content">
-
-            <div className="project-type">
-              {project.type}
-            </div>
-
-            <h2>{project.title}</h2>
-
-            <p>
-              {project.description}
-            </p>
-
-            <a
-              href={project.buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-button"
-            >
-              {project.buttonText}
-            </a>
-
-          </div>
+                </article>
+            ))}
 
         </div>
-
-      ))}
-
-    </div>
-  );
+    );
 };
 
 export default Projects;

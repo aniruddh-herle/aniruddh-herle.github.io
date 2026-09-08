@@ -16,9 +16,16 @@
     color: black;
 }
 
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
 #home {
     position: relative;
-    height: 90vh; 
+    height: 90vh;
+    box-sizing: border-box;
+
     color: #ffffff;
     text-align: center;
     overflow: hidden;
@@ -28,15 +35,72 @@
     justify-content: center;
 }
 
-/* Hero container fills the entire section */
-.hero {
-    position: relative;
+
+/* ============================================================
+   BACKGROUND VIDEO
+   ============================================================ */
+
+/*
+ * The video is positioned relative to #home, so it becomes
+ * a true full-section background rather than part of the
+ * content layout.
+ */
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
     width: 100%;
     height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* ============================================================
+   DARK OVERLAY
+   ============================================================ */
+
+#home::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   HERO CONTENT
+   ============================================================ */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
     z-index: 2;
 
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -60,7 +124,13 @@
 .academic-hero a:hover {
     transform: scale(1.2) !important;
 }
-.about p{
+
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+.about p {
     margin: 0 10%;
 }
 
@@ -90,6 +160,7 @@
 
 .intro-image {
     width: 100%;
+
     border-radius: 50%;
 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
@@ -112,7 +183,8 @@
 
 .research-card-section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
 
     text-align: center;
@@ -127,10 +199,20 @@
     font-weight: bold;
 }
 
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+
 .projects-main {
     margin-left: 10%;
     margin-right: 10%;
 }
+
+
+/* ============================================================
+   TABLET / SMALL DESKTOP
+   ============================================================ */
 
 @media (max-width: 1080px) {
 
@@ -155,5 +237,31 @@
 
     .research-card-section {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    #home {
+        height: 80vh;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin: 20px 5%;
+    }
+
+    .hero-video {
+        object-position: center;
     }
 }
