@@ -65,6 +65,7 @@ const Header = () => {
       </Link>
 
       <nav className="nav">
+
         <a
           href="#about"
           className={`a ${scrolling ? 'scrolled-a' : ''}`}
@@ -87,6 +88,15 @@ const Header = () => {
           onClick={handleScrollToSection('projects')}
         >
           Research
+        </a>
+
+        <a
+          href="https://ui.adsabs.harvard.edu/search/q=%20%20first_author%3A%22A.%20Herle%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`a ${scrolling ? 'scrolled-a' : ''}`}
+        >
+          NASA ADS
         </a>
 
         <a
@@ -116,6 +126,7 @@ const Header = () => {
         >
           CV
         </a>
+
       </nav>
 
       <button
@@ -140,6 +151,7 @@ const Header = () => {
 
       <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-menu-nav">
+
           <a
             href="#about"
             className="scrolled-a"
@@ -165,6 +177,16 @@ const Header = () => {
           </a>
 
           <a
+            href="https://ui.adsabs.harvard.edu/search/q=%20%20first_author%3A%22A.%20Herle%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="scrolled-a"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            NASA ADS
+          </a>
+
+          <a
             href="#contact"
             className="scrolled-a"
             onClick={handleScrollToSection('contact')}
@@ -177,6 +199,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="scrolled-a"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             Google Scholar
           </a>
@@ -191,6 +214,7 @@ const Header = () => {
           >
             CV
           </a>
+
         </nav>
       </div>
     </header>
