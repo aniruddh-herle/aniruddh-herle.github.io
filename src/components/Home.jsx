@@ -70,15 +70,15 @@ const Home = () => {
               I am a <b>PhD Candidate in Cosmology at Leiden Observatory</b>,
               working with Prof. Henk Hoekstra and Dr. Elisa Chisari. My
               research focuses on <b>intrinsic alignments, weak lensing,
-              galaxy–halo connections, and hydrodynamical simulations</b>,
+              the galaxy–halo connection, and hydrodynamical simulations</b>,
               with a particular emphasis on developing physically motivated
-              models for the next generation of cosmological surveys.
+              IA models for the next generation of cosmological surveys.
 
               <br /><br />
 
               My work combines cosmological simulations, large-scale
               structure statistics and statistical methodology to understand
-              how galaxy and halo shapes respond to their environments. I
+              how galaxies and haloes align in response to tidal fields. I
               primarily work with the <b>FLAMINGO</b> and <b>COLIBRE</b>
               hydrodynamical simulations, developing statistical tools that
               can be directly applied to precision weak-lensing analyses.
@@ -97,9 +97,6 @@ const Home = () => {
               I am also currently studying galaxy alignments around cosmic
               voids, the intrinsic-alignment B-mode signal, and the
               connection between halo shapes and their formation history.
-              More broadly, I am interested in statistical methods that can
-              extract robust cosmological information from increasingly
-              precise survey data.
 
               <br /><br />
 
@@ -124,7 +121,7 @@ const Home = () => {
           <div>Large-Scale Structure</div>
           <div>Halo Shapes</div>
           <div>Statistical Cosmology</div>
-          <div>Euclid & LSST</div>
+          <div>Euclid, Roman & LSST</div>
         </div>
 
       </div>
