@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../styles/home.css';
 
 import AcademicBar from './AcademicBar';
@@ -9,6 +9,22 @@ import Projects from './Projects';
 import Contact from './Contact';
 
 const Home = () => {
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      if (video.duration && video.currentTime >= video.duration - 1) {
+        video.currentTime = 0;
+      }
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
+  }, []);
 
   const heroText = (
     <div>
@@ -28,12 +44,12 @@ const Home = () => {
         <div className="hero">
 
           <video
+            ref={videoRef}
             className="hero-video"
             autoPlay
-            loop
             muted
             playsInline
-            disablePictureInPicture    
+            disablePictureInPicture
           >
             <source src={backgroundVideo} type="video/mp4" />
             Your browser does not support the video tag.
@@ -73,7 +89,9 @@ const Home = () => {
               research focuses on <b>intrinsic alignments, weak lensing,
               the galaxy–halo connection, and hydrodynamical simulations</b>,
               with a particular emphasis on developing physically motivated
-              IA models for the next generation of cosmological surveys.
+              IA models for the next generation of cosmological surveys. The 
+              video at the top shows how the universe evolves in the <b>FLAMINGO</b>
+              simulations.
 
               <br /><br />
 
