@@ -54,11 +54,12 @@
  */
 .hero-video {
     position: absolute;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);   /* ← full-bleed: centres 100vw within any container */
+    width: 100vw;
     height: auto;
 
-    top: -11vw;           /* ← 20% into the video (video height ≈ 56vw, 20% ≈ 11vw) */
+    top: -11vw;
 
     pointer-events: none;
     z-index: 0;
