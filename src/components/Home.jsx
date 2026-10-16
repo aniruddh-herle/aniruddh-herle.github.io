@@ -24,26 +24,28 @@ const Home = () => {
     <div className="main-div-home">
 
       {/* HERO */}
-      <div id="home">
-        <div className="hero">
+      <div className="hero-outer">
+        <div id="home">
+          <div className="hero">
 
-          <video
-            className="hero-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-            disablePictureInPicture    
-          >
-            <source src={backgroundVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+            <video
+              className="hero-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              disablePictureInPicture    
+            >
+              <source src={backgroundVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-          <div className="hero-content">
-            <h1>Aniruddh HERLE</h1>
-            {heroText}
+            <div className="hero-content">
+              <h1>Aniruddh HERLE</h1>
+              {heroText}
+            </div>
+
           </div>
-
         </div>
       </div>
 

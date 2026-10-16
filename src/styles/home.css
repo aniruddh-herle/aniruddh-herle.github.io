@@ -35,6 +35,12 @@
     justify-content: center;
 }
 
+.hero-outer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 /* ============================================================
    BACKGROUND VIDEO
    ============================================================ */
@@ -51,7 +57,7 @@
     width: 100%;
     height: auto;            /* natural aspect ratio — no stretching */
 
-    top: 0%;                 /* ← YOUR CROP CONTROL: 0% = top, -25% = quarter down, -50% = middle */
+    top: -10%;                 /* ← YOUR CROP CONTROL: 0% = top, -25% = quarter down, -50% = middle */
 
     pointer-events: none;
     z-index: 0;
