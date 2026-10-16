@@ -23,9 +23,10 @@
 
 #home {
     position: relative;
-    height: 340px;           /* height of the band — adjust freely */
+    height: 340px;
+    margin-top: calc(50vh - 170px);   /* ← new: centres the band in viewport */
     box-sizing: border-box;
-    overflow: hidden;        /* this is what does the cropping */
+    overflow: hidden;
 
     color: #ffffff;
     text-align: center;
@@ -52,12 +53,11 @@
  */
 .hero-video {
     position: absolute;
-
     left: 0;
     width: 100%;
-    height: auto;            /* natural aspect ratio — no stretching */
+    height: auto;
 
-    top: -10%;                 /* ← YOUR CROP CONTROL: 0% = top, -25% = quarter down, -50% = middle */
+    top: -11vw;           /* ← 20% into the video (video height ≈ 56vw, 20% ≈ 11vw) */
 
     pointer-events: none;
     z-index: 0;
