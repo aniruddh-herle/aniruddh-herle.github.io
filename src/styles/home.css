@@ -23,18 +23,17 @@
 
 #home {
     position: relative;
-    height: 90vh;
+    height: 340px;           /* height of the band — adjust freely */
     box-sizing: border-box;
+    overflow: hidden;        /* this is what does the cropping */
 
     color: #ffffff;
     text-align: center;
-    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 /* ============================================================
    BACKGROUND VIDEO
@@ -48,18 +47,15 @@
 .hero-video {
     position: absolute;
 
-    top: 0;
     left: 0;
-
     width: 100%;
-    height: 100%;
+    height: auto;            /* natural aspect ratio — no stretching */
 
-    object-fit: cover;
-    object-position: center;
+    top: 0%;                 /* ← YOUR CROP CONTROL: 0% = top, -25% = quarter down, -50% = middle */
 
+    pointer-events: none;
     z-index: 0;
 }
-
 
 /* ============================================================
    DARK OVERLAY
@@ -214,42 +210,10 @@
    TABLET / SMALL DESKTOP
    ============================================================ */
 
-@media (max-width: 1080px) {
-
-    .intro-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .intro-image {
-        max-width: 90%;
-        margin-bottom: 40px;
-        width: 50%;
-    }
-
-    .intro-text-container {
-        text-align: center;
-    }
-
-    .about p {
-        margin: 0 !important;
-    }
-
-    .research-card-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
 @media (max-width: 768px) {
 
     #home {
-        height: 80vh;
-        padding: 60px 20px;
+        height: clamp(220px, 30vh, 300px);   /* ← was 80vh + padding */
     }
 
     .hero h1 {
@@ -262,6 +226,20 @@
     }
 
     .hero-video {
-        object-position: center;
+        object-position: top center;
+    }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+
+    #home {
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }
