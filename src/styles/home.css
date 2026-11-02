@@ -25,7 +25,7 @@
 #home {
     position: relative;
     height: 340px;
-    margin-top: calc(50vh - 170px);   /* ← new: centres the band in viewport */
+    margin-top: calc(50vh - 170px);
     box-sizing: border-box;
     overflow: hidden;
 
@@ -37,25 +37,14 @@
     justify-content: center;
 }
 
-.hero-outer {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
 /* ============================================================
    BACKGROUND VIDEO
    ============================================================ */
 
-/*
- * The video is positioned relative to #home, so it becomes
- * a true full-section background rather than part of the
- * content layout.
- */
 .hero-video {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);   /* ← full-bleed: centres 100vw within any container */
+    transform: translateX(-50%);
     width: 100vw;
     height: auto;
 
@@ -217,72 +206,72 @@
 /* ============================================================
    MOBILE  (≤ 768px)
    ============================================================ */
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     /* --- Hero band --- */
     #home {
-      height: 220px;
-      margin-top: calc(50vh - 110px);   /* re-centre the 220px band */
+        height: 220px;
+        margin-top: calc(50vh - 110px);
     }
-  
+
     .hero h1 {
-      font-size: 2.2rem;
+        font-size: 2.2rem;
     }
-  
-    /* Fix video: fill the band by height, centre horizontally.
-       On narrow screens the vw-based width left gaps — this covers it. */
+
+    /* Make video wider than the screen so it gains enough height
+       to crop the same region as desktop. Sides are clipped by
+       overflow:hidden on #home. top:-11vw matches the desktop offset. */
     .hero-video {
-      width: auto;
-      height: 100%;
-      min-width: 100%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+        width: 180vw;
+        height: auto;
+        top: -11vw;
+        left: 50%;
+        transform: translateX(-50%);
     }
-  
+
     /* --- About --- */
     .intro-grid {
-      grid-template-columns: 1fr;   /* stack image above text */
-      padding-left: 5%;
-      padding-right: 5%;
+        grid-template-columns: 1fr;
+        padding-left: 5%;
+        padding-right: 5%;
     }
-  
+
     .intro-image {
-      width: 55%;
-      margin: 0 auto 20px;
-      display: block;
+        width: 55%;
+        margin: 0 auto 20px;
+        display: block;
     }
-  
+
     .intro-text-container p {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-  
+
     .about p {
-      margin: 0 5%;
+        margin: 0 5%;
     }
-  
-    /* Research interests: 4 cols → 2 cols (main overflow culprit) */
+
+    /* Research interests: 4 cols → 2 cols */
     .research-card-section {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 10px 5%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px 5%;
     }
-  
+
     /* --- Section gaps --- */
     .sections-home {
-      margin-top: 60px;   /* was 120px */
+        margin-top: 60px;
     }
-  
+
     /* --- Timeline & Projects --- */
     .timeline-main {
-      margin-left: 2%;
-      margin-right: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
-  
+
     .projects-main {
-      margin-left: 2%;
-      margin-right: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
-  
-  }
+
+}

@@ -90,16 +90,16 @@ const Home = () => {
               the galaxy–halo connection, and hydrodynamical simulations</b>,
               with a particular emphasis on developing physically motivated
               IA models for the next generation of cosmological surveys. The 
-              video at the top shows how the universe evolves in the <b>FLAMINGO</b>
-               simulations.
+              video at the top shows how the universe evolves in the <b>FLAMINGO</b> simulations.
+            
 
               <br /><br />
 
               My work combines cosmological simulations, large-scale
               structure statistics and statistical methodology to understand
               how galaxies and haloes align in response to tidal fields. I
-              primarily work with the <b>FLAMINGO</b> and <b>COLIBRE</b>
-               hydrodynamical simulations, developing statistical tools that
+              primarily work with the <b>FLAMINGO</b> and <b>COLIBRE</b> hydrodynamical
+              simulations, developing statistical tools that
               can be directly applied to precision weak-lensing analyses.
 
               <br /><br />
