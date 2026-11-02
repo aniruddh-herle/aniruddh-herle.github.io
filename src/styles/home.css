@@ -14,7 +14,7 @@
 
 .home-headers {
     margin-top: 40px;
-    color: black;
+    color: #dde6f0;        /* was black */
 }
 
 
@@ -187,8 +187,17 @@
     padding: 10px 10%;
 }
 
+/* subtle dark card styling for each tag */
+.research-card-section > div {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(100, 160, 220, 0.2);
+    border-radius: 6px;
+    padding: 12px 8px;
+    color: #dde6f0;
+}
+
 .intro-text-codes {
-    color: #007fff;
+    color: #4da6ff;        /* was #007fff — brighter on dark bg */
     font-weight: bold;
 }
 
@@ -218,13 +227,11 @@
         font-size: 2.2rem;
     }
 
-    /* Make video wider than the screen so it gains enough height
-       to crop the same region as desktop. Sides are clipped by
-       overflow:hidden on #home. top:-11vw matches the desktop offset. */
+    /* wider video so there's height to crop; -22vw chops the top text */
     .hero-video {
         width: 180vw;
         height: auto;
-        top: -11vw;
+        top: -22vw;        /* was -11vw — chops the top portion */
         left: 50%;
         transform: translateX(-50%);
     }

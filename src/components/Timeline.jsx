@@ -81,12 +81,12 @@ const Timeline = () => {
       scrollable={false}
       cardHeight={180}
       theme={{
-        primary: '#000000',
-        secondary: '#ffffff',
-        cardBgColor: '#ffffff',
-        cardForeColor: '#000000',
-        titleColor: '#000000',
-        titleColorActive: '#000000'
+        primary: '#4da6ff',
+        secondary: '#142233',
+        cardBgColor: '#142233',
+        cardForeColor: '#dde6f0',
+        titleColor: '#EB9F42',
+        titleColorActive: '#EB9F42'
       }}
     />
   );
