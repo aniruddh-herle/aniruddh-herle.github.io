@@ -72,7 +72,7 @@ const entries = [
 const Timeline = () => {
   return (
     <Chrono
-      items={entries}
+      items={[...entries].reverse()}
       mode="VERTICAL_ALTERNATING"
       slideShow={false}
       hideControls={true}

@@ -91,7 +91,7 @@ const Home = () => {
               with a particular emphasis on developing physically motivated
               IA models for the next generation of cosmological surveys. The 
               video at the top shows how the universe evolves in the <b>FLAMINGO</b>
-              simulations.
+               simulations.
 
               <br /><br />
 
@@ -99,7 +99,7 @@ const Home = () => {
               structure statistics and statistical methodology to understand
               how galaxies and haloes align in response to tidal fields. I
               primarily work with the <b>FLAMINGO</b> and <b>COLIBRE</b>
-              hydrodynamical simulations, developing statistical tools that
+               hydrodynamical simulations, developing statistical tools that
               can be directly applied to precision weak-lensing analyses.
 
               <br /><br />

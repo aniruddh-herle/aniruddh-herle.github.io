@@ -38,10 +38,10 @@ const Contact = () => {
           <FontAwesomeIcon icon={faEnvelope} />
 
           <a
-            href="mailto:aniruddh.herle@gmail.com"
+            href="mailto:herle@strw.leidenuniv.nl"
             className="contact-links"
           >
-            aniruddh.herle@gmail.com
+            herle@strw.leidenuniv.nl
           </a>
         </div>
 

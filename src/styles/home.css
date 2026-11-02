@@ -215,39 +215,74 @@
 
 
 /* ============================================================
-   TABLET / SMALL DESKTOP
+   MOBILE  (≤ 768px)
    ============================================================ */
+   @media (max-width: 768px) {
 
-@media (max-width: 768px) {
-
+    /* --- Hero band --- */
     #home {
-        height: clamp(220px, 30vh, 300px);   /* ← was 80vh + padding */
+      height: 220px;
+      margin-top: calc(50vh - 110px);   /* re-centre the 220px band */
     }
-
+  
     .hero h1 {
-        font-size: 3rem;
+      font-size: 2.2rem;
     }
-
-    .hero p {
-        font-size: 1rem;
-        margin: 20px 5%;
-    }
-
+  
+    /* Fix video: fill the band by height, centre horizontally.
+       On narrow screens the vw-based width left gaps — this covers it. */
     .hero-video {
-        object-position: top center;
+      width: auto;
+      height: 100%;
+      min-width: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
-}
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-@media (max-width: 768px) {
-
-    #home {
-        height: 220px;
+  
+    /* --- About --- */
+    .intro-grid {
+      grid-template-columns: 1fr;   /* stack image above text */
+      padding-left: 5%;
+      padding-right: 5%;
     }
-
-    .hero h1 {
-        font-size: 2.5rem;
+  
+    .intro-image {
+      width: 55%;
+      margin: 0 auto 20px;
+      display: block;
     }
-}
+  
+    .intro-text-container p {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  
+    .about p {
+      margin: 0 5%;
+    }
+  
+    /* Research interests: 4 cols → 2 cols (main overflow culprit) */
+    .research-card-section {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 10px 5%;
+    }
+  
+    /* --- Section gaps --- */
+    .sections-home {
+      margin-top: 60px;   /* was 120px */
+    }
+  
+    /* --- Timeline & Projects --- */
+    .timeline-main {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  
+    .projects-main {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  
+  }
