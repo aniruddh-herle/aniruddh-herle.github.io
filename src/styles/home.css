@@ -14,7 +14,7 @@
 
 .home-headers {
     margin-top: 40px;
-    color: #ffffff;        /* was black */
+    color: black;
 }
 
 
@@ -174,26 +174,21 @@
    RESEARCH INTERESTS
    ============================================================ */
 
-.research-card-section > div {
-    background: rgba(77, 166, 255, 0.12);
-    border: 1px solid rgba(77, 166, 255, 0.4);
-    border-radius: 6px;
-    padding: 12px 8px;
-    color: #ffffff;
-    font-weight: 500;
-}
+.research-card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-/* subtle dark card styling for each tag */
-.research-card-section > div {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(100, 160, 220, 0.2);
-    border-radius: 6px;
-    padding: 12px 8px;
-    color: #dde6f0;
+    gap: 25px;
+
+    text-align: center;
+    align-content: center;
+    justify-content: space-between;
+
+    padding: 10px 10%;
 }
 
 .intro-text-codes {
-    color: #4da6ff;        /* was #007fff — brighter on dark bg */
+    color: #007fff;
     font-weight: bold;
 }
 
@@ -210,71 +205,4 @@
 
 /* ============================================================
    MOBILE  (≤ 768px)
-   ============================================================ */
-@media (max-width: 768px) {
-
-    /* --- Hero band --- */
-    #home {
-        height: 220px;
-        margin-top: calc(50vh - 110px);
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    /* wider video so there's height to crop; -22vw chops the top text */
-    .hero-video {
-        width: 180vw;
-        height: auto;
-        top: -22vw;        /* was -11vw — chops the top portion */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* --- About --- */
-    .intro-grid {
-        grid-template-columns: 1fr;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .intro-image {
-        width: 55%;
-        margin: 0 auto 20px;
-        display: block;
-    }
-
-    .intro-text-container p {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .about p {
-        margin: 0 5%;
-    }
-
-    /* Research interests: 4 cols → 2 cols */
-    .research-card-section {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 10px 5%;
-    }
-
-    /* --- Section gaps --- */
-    .sections-home {
-        margin-top: 60px;
-    }
-
-    /* --- Timeline & Projects --- */
-    .timeline-main {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-    .projects-main {
-        margin-left: 2%;
-        margin-right: 2%;
-    }
-
-}
+   ============================================

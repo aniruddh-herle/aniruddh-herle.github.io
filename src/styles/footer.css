@@ -5,10 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0a1628;     /* was #fff */
-    color: #dde6f0;                /* was #000 */
+    background-color: #fff;
+    color: #000;
     height: 100px;
-    box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .footer-content {
@@ -32,7 +32,7 @@
 }
 
 .email {
-    color: #dde6f0;                /* was black */
+    color: black;
     margin: 10px;
     font-size: 24px;
     text-decoration: none;
@@ -45,7 +45,7 @@
 }
 
 .footer-link {
-    color: #dde6f0;                /* was black */
+    color: black;
     text-decoration: none;
 }
 

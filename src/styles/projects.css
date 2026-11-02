@@ -2,7 +2,7 @@
    PUBLICATIONS
    ============================================================ */
 
-.publication-grid {
+   .publication-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -124,49 +124,4 @@
 }
 
 
-/* ============================================================
-   TABLET
-   ============================================================ */
-
-@media (max-width: 900px) {
-
-    .publication-grid {
-        grid-template-columns: 1fr;
-
-        margin-left: 8%;
-        margin-right: 8%;
-    }
-}
-
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
-@media (max-width: 600px) {
-
-    .publication-grid {
-        margin-left: 5%;
-        margin-right: 5%;
-
-        gap: 20px;
-    }
-
-    .publication-card {
-        padding: 20px;
-    }
-
-    .publication-year {
-        width: 45px;
-
-        font-size: 1rem;
-    }
-
-    .publication-content h2 {
-        font-size: 1.05rem;
-    }
-
-    .publication-content p {
-        font-size: 0.9rem;
-    }
-}
+/* ============================================
