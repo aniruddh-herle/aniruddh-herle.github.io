@@ -71,24 +71,25 @@ const entries = [
 
 const Timeline = () => {
   return (
-    <Chrono
-      items={[...entries].reverse()}
-      mode="VERTICAL_ALTERNATING"
-      slideShow={false}
-      hideControls={true}
-      allowDynamicUpdate={true}
-      titleDateFormat="YYYY"
-      scrollable={false}
-      cardHeight={180}
-      theme={{
-        primary: '#4da6ff',
-        secondary: '#142233',
-        cardBgColor: '#142233',
-        cardForeColor: '#dde6f0',
-        titleColor: '#EB9F42',
-        titleColorActive: '#EB9F42'
-      }}
-    />
+      <Chrono
+        items={[...entries].reverse()}
+        mode="VERTICAL_ALTERNATING"
+        colorMode="dark"
+        slideShow={false}
+        hideControls={true}
+        allowDynamicUpdate={true}
+        titleDateFormat="YYYY"
+        scrollable={false}
+        cardHeight={180}
+        theme={{
+          primary: '#4da6ff',
+          secondary: '#1e3a5f',
+          cardBgColor: '#1a2d42',
+          cardForeColor: '#e8f0fe',
+          titleColor: '#EB9F42',
+          titleColorActive: '#EB9F42'
+        }}
+  />
   );
 };
 

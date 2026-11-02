@@ -14,7 +14,7 @@
 
 .home-headers {
     margin-top: 40px;
-    color: #dde6f0;        /* was black */
+    color: #ffffff;        /* was black */
 }
 
 
@@ -174,17 +174,13 @@
    RESEARCH INTERESTS
    ============================================================ */
 
-.research-card-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px;
-
-    text-align: center;
-    align-content: center;
-    justify-content: space-between;
-
-    padding: 10px 10%;
+.research-card-section > div {
+    background: rgba(77, 166, 255, 0.12);
+    border: 1px solid rgba(77, 166, 255, 0.4);
+    border-radius: 6px;
+    padding: 12px 8px;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 /* subtle dark card styling for each tag */
